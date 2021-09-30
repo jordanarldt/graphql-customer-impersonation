@@ -1,0 +1,15 @@
+{
+  "name": "customer-impersonation-token",
+  "version": "1.0.0",
+  "description": "Example app for using a Customer Impersonation Token with GraphQL",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jordan Arldt",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.5"
+  }
+}
