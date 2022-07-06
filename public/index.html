@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>GraphQL Customer Impersonation Token Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>GraphQL Customer Impersonation Token Example</h1>
+    <p>This is a simple app to demonstrate server-side use of a Customer Impersonation Token. An easy way to see this in action is to assign a customer to a customer group that has limited category access, and then use their ID to make the request.</p>
+    <p>The GraphQL Query will be for a simple list of products.</p>
+    <form id="form">
+      <div>
+        <label for="impersonationToken">Impersonation Token:</label>
+        <span class="note">This is the token you receive from the BigCommerce API.</span>
+        <input id="impersonationToken" name="impersonationToken" autocomplete="off" type="text" required />
+      </div>
+      <div>
+        <label for="storeHash">Store Hash:</label>
+        <input id="storeHash" name="storeHash" autocomplete="off" type="text" required />
+      </div>
+      <div>
+        <label for="channelId">Channel ID:</label>
+        <input id="channelId" name="channelId" autocomplete="off" type="number" required />
+      </div>
+      <div>
+        <label for="customerId">Customer ID:</label>
+        <span class="note">This is used to set the X-Bc-Customer-Id header in the request.</span>
+        <input id="customerId" name="customerId" autocomplete="off" type="number" required />
+      </div>
+      <button type="submit">Send GraphQL Query</button>
+    </form>
+    <hr />
+    <h2>Response</h2>
+    <div id="response"></div>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>
